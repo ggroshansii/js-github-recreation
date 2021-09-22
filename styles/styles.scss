@@ -1,0 +1,20 @@
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid red;
+}
+
+.git-bio {
+    border: 2px solid green;
+}
+
+.git-repo {
+    border: 2px solid blue;
+
+}
+
+.repo-card {
+    border-top: 1px solid black;
+}

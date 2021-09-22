@@ -1,1 +1,23 @@
-/* No CSS *//*# sourceMappingURL=styles.css.map */
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border: 1px solid red;
+}
+
+.git-bio {
+  border: 2px solid green;
+}
+
+.git-repo {
+  border: 2px solid blue;
+}
+
+.repo-card {
+  border-top: 1px solid black;
+}
+/*# sourceMappingURL=styles.css.map */

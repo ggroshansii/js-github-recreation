@@ -17,18 +17,26 @@
         document.querySelector(htmlSelector).innerHTML = ourGeneratedHTML;
     }
 
-    fetch(`https://api.github.com/users/ggroshansii`)
+    Promise.all([
+
+        fetch(`https://api.github.com/users/ggroshansii`)
         .then(response => response.json())
-        .then(data => generateHTMLfromObject(data, '#git-bio-template', '.git-bio'))
+        .then(data => generateHTMLfromObject(data, '#git-bio-template', '.git-bio')),
+
+        fetch(`https://api.github.com/users/ggroshansii/repos`)
+        .then(response => response.json())
+        .then(data => generateHTMLfromArr(data, '#git-repo-template', '.git-repo'))
+
+    ])
+
+    
 
 
     // fetch(`https://api.github.com/users/ggroshansii/orgs`)
     //     .then(response => response.json())
     //     .then(data => console.log(data))
 
-    fetch(`https://api.github.com/users/ggroshansii/repos`)
-        .then(response => response.json())
-        .then(data => generateHTMLfromArr(data, '#git-repo-template', '.git-repo'))
+
 
 
 })()

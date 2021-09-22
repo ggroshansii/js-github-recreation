@@ -1,45 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles/styles.css" />
+        <title>GitHub Recreation</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/styles.css">
-    <title>GitHub Recreation</title>
-</head>
+    <body>
+        <div class="container">
+            <div class="git-bio">
+                <script id="git-bio-template" type="text/x-handlebars-template">
+                    <div><img src="{{this.avatar_url}}" alt="" /></div>
+                    <div><p>{{this.login}}</p></div>
+                    <div><p>{{this.followers}}</p></div>
+                    <div><p>{{this.following}}</p></div>
+                </script>
+            </div>
 
-<body>
+            <p>regular p tag</p>
 
-    <div class="container">
+            <div class="git-repo">
+                <script
+                    id="git-repo-template"
+                    type="text/x-handlebars-template"
+                >
+                    <div class="repo-card">
+                        {{#each gitData}}
+                            <p>{{this.name}}</p>
+                        {{/each}}
+                    </div>
+                </script>
+            </div>
+        </div>
 
-    </div>
-    <div class="git-bio">
-        <script id="git-bio-template" type="text/x-handlebars-template">
-            <div><img src="{{this.avatar_url}}" alt=""></div>
-            <div><p>{{this.login}}</p></div>
-            <div><p>{{this.followers}}</p></div>
-            <div><p>{{this.following}}</p></div>
-        </script>
-    </div>
-
-
-    <p>regular p tag</p>
-
-
-    <div class="git-repo">
-        <script id="git-repo-template" type="text/x-handlebars-template">
-            {{#each gitData}}
-            <p>{{this.name}}</p>
-            {{/each}}
-        </script>
-    </div>
- 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
-        integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="main.js"></script>
-</body>
-
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
+            integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script src="main.js"></script>
+    </body>
 </html>
