@@ -6,7 +6,7 @@ $cGray: #555555;
 $scssPink: #c4568c;
 
 .container {
-    max-width: 850px;
+    max-width: 950px;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -18,6 +18,11 @@ $scssPink: #c4568c;
     width: 45%;
     img {
         width: 15rem;
+    }
+    .followers {
+        display: flex;
+        justify-content: space-around;
+        border-bottom: 1px solid black;
     }
 }
 

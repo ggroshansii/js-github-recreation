@@ -15,8 +15,16 @@
                 <script id="git-bio-template" type="text/x-handlebars-template">
                     <div><img src="{{this.avatar_url}}" alt="" /></div>
                     <div><p>{{this.login}}</p></div>
-                    <div><p><i class="fas fa-users"></i>{{this.followers}} follower</p></div>
-                    <div><p>{{this.following}} following</p></div>
+                    <button>Edit Profile</button>
+                    <div class="followers">
+                        <div><i class="fas fa-users"></i></div>
+                        <div><p>{{this.followers}} follower &middot;</p></div>
+                        <div><p>{{this.following}} following &middot;</p></div>
+                        <div><i class="far fa-star"></i><span class="star-num">{{this.length}}</span> </div>
+                    </div>
+                    <h2>Achievements</h2>
+                    <img src="https://github.githubassets.com/images/modules/profile/badge--acv-64.png" alt="">
+
                 </script>
             </div>
 

@@ -23,6 +23,10 @@
         .then(response => response.json())
         .then(data => generateHTMLfromObject(data, '#git-bio-template', '.git-bio')),
 
+        fetch(`https://api.github.com/users/ggroshansii/starred`)
+        .then(response => response.json())
+        .then(data => generateHTMLfromArr(data, '#git-bio-template', '.star-num')),
+
         fetch(`https://api.github.com/users/ggroshansii/repos`)
         .then(response => response.json())
         .then(data => generateHTMLfromArr(data, '#git-repo-template', '.git-repo'))
