@@ -19,8 +19,6 @@
                 </script>
             </div>
 
-            <p>regular p tag</p>
-
             <div class="git-repo">
                 <script
                     id="git-repo-template"
@@ -28,7 +26,16 @@
                 >
                     <div class="repo-card">
                         {{#each gitData}}
-                            <p>{{this.name}}</p>
+                            <div class='repo-first-row'>
+                                <p>{{this.name}}</p>
+                                {{#if this.private}}
+                                <p class='private'>Private</p>
+                                {{/if}}
+                                {{#unless this.private}}
+                                <p class='public'>Public</p>
+                                {{/unless}}
+                            </div>
+
                         {{/each}}
                     </div>
                 </script>

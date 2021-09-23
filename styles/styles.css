@@ -13,11 +13,29 @@
   border: 2px solid green;
 }
 
+.git-bio img {
+  width: 15rem;
+}
+
 .git-repo {
   border: 2px solid blue;
 }
 
 .repo-card {
   border-top: 1px solid black;
+}
+
+.repo-first-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.repo-first-row .public, .repo-first-row .private {
+  border: 1px solid black;
+  border-radius: 50%;
+  padding: 0.15rem 0.2rem 0.15rem 0.2rem;
 }
 /*# sourceMappingURL=styles.css.map */

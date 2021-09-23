@@ -8,6 +8,9 @@
 
 .git-bio {
     border: 2px solid green;
+    img {
+        width: 15rem;
+    }
 }
 
 .git-repo {
@@ -17,4 +20,15 @@
 
 .repo-card {
     border-top: 1px solid black;
+}
+
+.repo-first-row {
+    display: flex;
+    justify-content: space-around;
+    .public, .private {
+        border: 1px solid black;
+        border-radius: 50%;
+        padding: 0.15rem 0.2rem 0.15rem 0.2rem;
+    }
+
 }
