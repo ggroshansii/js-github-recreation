@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
         <link rel="stylesheet" href="styles/styles.css" />
         <title>GitHub Recreation</title>
     </head>
@@ -14,30 +15,32 @@
                 <script id="git-bio-template" type="text/x-handlebars-template">
                     <div><img src="{{this.avatar_url}}" alt="" /></div>
                     <div><p>{{this.login}}</p></div>
-                    <div><p>{{this.followers}}</p></div>
-                    <div><p>{{this.following}}</p></div>
+                    <div><p><i class="fas fa-users"></i>{{this.followers}} follower</p></div>
+                    <div><p>{{this.following}} following</p></div>
                 </script>
             </div>
 
             <div class="git-repo">
                 <script
                     id="git-repo-template"
-                    type="text/x-handlebars-template"
-                >
+                    type="text/x-handlebars-template">
                     <div class="repo-card">
                         {{#each gitData}}
-                            <div class='repo-first-row'>
-                                <p>{{this.name}}</p>
+                            <div class="repo-first-row">
+                                <p class='repo-name'>{{this.name}}</p>
                                 {{#if this.private}}
-                                <p class='private'>Private</p>
+                                    <p class="private">Private</p>
                                 {{/if}}
                                 {{#unless this.private}}
-                                <p class='public'>Public</p>
+                                    <p class="public">Public</p>
                                 {{/unless}}
                             </div>
                             <div class="repo-second-row">
-                                <div class='lang-icon'>Icon</div>
-                                <div class='lang-name'>{{this.language}}</div>
+
+                                <div class="lang-name"><span class='{{this.language}}'></span>{{this.language}}</div>
+                                <div class="updated-last">
+                                    Updated
+                                    {{this.updated_at}}</div>
                             </div>
                         {{/each}}
                     </div>

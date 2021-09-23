@@ -1,6 +1,13 @@
-
+$htmlRed: #e14d30;
+$pythonBlue: #3873a3;
+$jsYellow: #f1df65;
+$cssPurple: #563f7b;
+$cGray: #555555;
+$scssPink: #c4568c;
 
 .container {
+    max-width: 850px;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     border: 1px solid red;
@@ -8,14 +15,24 @@
 
 .git-bio {
     border: 2px solid green;
+    width: 45%;
     img {
         width: 15rem;
     }
 }
 
 .git-repo {
+    width: 80%;
     border: 2px solid blue;
 
+}
+
+.repo-name {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: blue;
+    font-size: 1.2rem;
+    font-size: 900;
+    margin-left: 1rem;
 }
 
 .repo-card {
@@ -24,16 +41,50 @@
 
 .repo-first-row {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     .public, .private {
         border: 1px solid black;
-        border-radius: 50%;
-        padding: 0.15rem 0.2rem 0.15rem 0.2rem;
+        border-radius: 25%;
+        padding: 0rem;
+        margin-left: 1rem;
     }
 
 }
 
 .repo-second-row {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
+    span {
+        display: inline-block;
+        position: relative;
+        height: 2px;
+        width: 2px;
+        padding: 0.18rem;
+        border: 1px solid black;
+        border-radius: 50%;
+        line-height: 0.25rem;
+        margin-right: 0.25rem;
+        margin-left: 0.15rem;
+    }
+    .lang-name {
+        margin-right: 1rem;
+    }
+    .HTML {
+        background-color: $htmlRed;
+    }
+    .Python {
+        background-color: $pythonBlue;
+    }
+    .JavaScript{
+        background-color: $jsYellow;
+    }
+    .CSS{
+        background-color: $cssPurple;
+    }
+    .C {
+        background-color: $cGray;
+    }
+    .SCSS {
+        background-color: $scssPink;
+    }
 }
